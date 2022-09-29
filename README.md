@@ -1,4 +1,4 @@
 
 # INFO
 
-Repo for 'GitHUB actions' opportunity research 
+Repo for 'GitHUB actions' opportunity research.

@@ -1,5 +1,5 @@
-name: Example workflow for dotNET using Snyk
-on: push
+name: Snyk
+#on: push
 jobs:
   security:
     runs-on: ubuntu-latest

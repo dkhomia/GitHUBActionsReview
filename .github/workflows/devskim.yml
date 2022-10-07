@@ -5,11 +5,11 @@
 
 name: DevSkimScan
 
-#on:
+on:
 #  push:
 #    branches: [ "main" ]
-#  pull_request:
-#    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   lint:

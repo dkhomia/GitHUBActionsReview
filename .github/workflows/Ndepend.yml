@@ -1,5 +1,17 @@
-- name: NDepend
-    uses: ndepend/ndepend-action@v1
-    with:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
-      license: ${{ secrets.NDEPENDLICENSE }}
+name: 'Dependency Review'
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+        - name: NDepend
+        uses: ndepend/ndepend-action@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+          license: ${{ secrets.NDEPENDLICENSE }}

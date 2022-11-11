@@ -1,4 +1,4 @@
-- name: NDepend
+name: NDepend
     uses: ndepend/ndepend-action@ndependv1.0
     with:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  

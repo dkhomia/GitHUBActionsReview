@@ -2,4 +2,4 @@ name: NDepend
     uses: ndepend/ndepend-action@ndependv1.0
     with:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
-      license: ${{ secrets.NDependLicense }}
+      license: ${{ secrets.NDEPENDLICENSE }}

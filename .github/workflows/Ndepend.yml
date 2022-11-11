@@ -1,5 +1,5 @@
-name: NDepend
-    uses: ndepend/ndepend-action@ndependv1.0
+- name: NDepend
+    uses: ndepend/ndepend-action@v1
     with:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
       license: ${{ secrets.NDEPENDLICENSE }}

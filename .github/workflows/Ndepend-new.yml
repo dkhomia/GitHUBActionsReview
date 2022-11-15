@@ -22,15 +22,12 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: NDepend
+      uses: ndepend/ndepend-action@v1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+        license: ${{ secrets.NDEPENDLICENSE }}
+        solution: ./Tailspin.SpaceGame.Web.sln
 
-  dependency-review:
-    runs-on: ubuntu-latest
-    steps:
-        - name: 'Checkout Repository'
-          uses: actions/checkout@v3
-        - name: NDepend
-          uses: ndepend/ndepend-action@v1
-          with:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
-            license: ${{ secrets.NDEPENDLICENSE }}
-            solution: ./Tailspin.SpaceGame.Web.sln
+
+
